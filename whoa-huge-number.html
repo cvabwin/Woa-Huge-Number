@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Whoa Huge Number</title>
+    <script type="text/javascript">
+    // Add odd integers from -300,000 to 300,000, and console.log the final sum. Is there a shortcut?
+   
+   // The first parameter is for a negative number and the second parameter is for a positive number
+    function sumOddNum(num1,num2){
+        var sum = 0;
+        if(num1 % 2 == 0){
+            num1 = num1+1;
+            num2 = num2-1;
+        }
+        /*If both parameters have the same abosolute value (i.e., -300 and 300) then
+         they cancel each out out and the sum will be equal to zero */
+        if(Math.abs(num1) == Math.abs(num2)){
+            return console.log("The final sum is: 0");
+        
+        //Otherwise, add the range of numbers entered in the function
+        }else{
+             for(var i = num1; i <= num2; i+=2){
+            sum = sum + i;
+            console.log("i is now " + i);
+            console.log("sum is now " + sum);     
+            }
+        } 
+            return console.log("The final sum is: " + sum);
+    }
+    sumOddNum(-252,252);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
